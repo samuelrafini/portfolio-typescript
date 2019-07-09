@@ -3,13 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 enum classType {
   button='button',
-  go='btn--goto',
-  back='btn--back',
-  view='btn--view'
 }
 
 interface ButtonProps {
-  type: 'back' | 'go' | 'view',
   children: ReactNode,
   onClick: (event: MouseEvent<HTMLElement>) => void,
 }
