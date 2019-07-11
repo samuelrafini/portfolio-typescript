@@ -1,0 +1,126 @@
+.header {
+    display: flex;
+    justify-content: space-between; 
+    padding: 0 40px;
+    height: 75px;
+    width: 100%;
+}
+
+.header-logo {
+    margin-top: auto;
+    @include headerLogo();
+    text-decoration: none;
+}
+
+.header-menu {
+    z-index: 1;
+    margin-bottom: 16px;
+    margin-top: auto;
+    cursor: pointer; 
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $lightGrey;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0.5s, opacity 0.5s ease-in-out;
+
+    &-link {
+        position: relative;
+        @include nav-link();
+        text-decoration: none;
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        &--strike {
+            position: absolute;
+            height: 2px;
+            width: 0%;
+            left: -6%;
+            background-color: $grey;
+            margin-top: 26px;
+            border: none;
+            transition: width 1s ease;
+        }
+
+        &:hover {
+            color: $darkGrey;
+        }
+
+        &:hover  &--strike {
+            width: 112%;
+            transition: width 1s ease;
+        }
+    }
+
+    &--hidden {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.5s, opacity 0.5s;
+    }
+}
+
+.icon {
+    font-size: 30px;
+    color: $black;
+    margin: 10px;
+
+    &-wrapper {
+        display: flex;
+        justify-self: end;
+        margin-top: auto;
+        margin-bottom: 30px;
+    }
+}
+
+.none {
+    display: none;
+}
+
+@media only screen and (max-width: 450px) {
+    .header {
+        padding: 0 20px;
+        height: 50px;
+    }
+
+    .icon {
+        font-size: 30px;
+        color: $black;
+        margin: 10px;
+    
+        &-wrapper {
+            display: flex;
+            justify-self: end;
+            margin-top: auto;
+            margin-bottom: 10px;
+        }
+    }
+
+    .nav {
+        &-link {
+            font-size: 20px;
+            &--strike {
+                position: absolute;
+                height: 2px;
+                width: 0%;
+                left: -6%;
+                background-color: $grey;
+                margin-top: 18px;
+                border: none;
+                transition: width 1s ease;
+            }
+        }
+    }
+  }

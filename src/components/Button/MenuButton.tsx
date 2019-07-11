@@ -1,20 +1,25 @@
 import React, { ReactNode, MouseEvent, useState, useEffect } from 'react';
 
 interface IButtonProps {
+  isActive: Function,
+  className: string
 }
 
 
 export const MenuButton = (props: IButtonProps) => {
 const [menuActive, setActive] = useState(false);
 
-const handleClick = (e: Event)=> {
+const handleClick = () => {
     menuActive ? setActive(false) : setActive(true);
-    console.log(menuActive);
 }
 
+useEffect(() => {
+  props.isActive(menuActive);
+});
+
+console.log('outside handles', menuActive);
   return (
-      <div className='menu' onClick={() => menuActive ? setActive(false) : setActive(true)}>
-        <p>{menuActive ? 'waw' : 'boo'}</p>
+      <div className={`menu${' ' + props.className}`} onClick={() => handleClick()}>
         <div className={`menu-top${menuActive ? ' menu-top--turn': ''}`}/>
         <div className={`menu-middle${menuActive ? ' menu-middle--fadeout' : ''}`}/>
         <div className={`menu-bottom${menuActive ? ' menu-bottom--turn': ''}`}/>

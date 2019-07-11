@@ -1,10 +1,12 @@
 import React, { ReactNode, MouseEvent } from 'react';
+import { RouteComponentProps } from 'react-router';
 
-interface HomeProps {
+interface HomeProps extends RouteComponentProps {
 
 }
 
 const Home = (props: HomeProps) => {
+  console.log(props);
   return (
       <>
       </>
