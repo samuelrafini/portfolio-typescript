@@ -1,0 +1,95 @@
+.home {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    &-line {
+        margin-left: 50%;
+        background-color: $white;
+        position: absolute;
+        width: 2px;
+        animation: line 2s ease 1s 1 normal forwards;
+    }
+
+    &-left {
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: $black;
+        width: 49%;
+    }
+
+    &-name {
+        @include Title-xl;
+        line-height: 100px;
+    }
+
+    &-title {
+        @include Title;
+        margin: 0;
+    }
+
+    &-right {
+        background-image: url('../assets/img/black-and-white-dark-male-22147.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 70% center;
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 550px) {
+    .home-name{
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .home-title{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .home-left{
+        width: 25%;
+        justify-content: flex-end;
+    }
+    .home-right{
+        width: 75%;
+        justify-content: flex-end;
+    }
+    .home-name {
+        position: relative;
+        margin-left: 80%;
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .home-title{
+        position: relative;
+        margin-left: 80%;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}
+
+@keyframes line {
+    from {
+        height: 0vh;
+    }
+  
+    to {
+        height: 100vh;
+    }
+  }
+
+  @keyframes page-transition {
+    from {
+        width: 0%;
+
+    }
+  
+    to {
+        width: 100%;
+    }
+  }

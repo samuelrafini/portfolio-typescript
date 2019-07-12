@@ -17,9 +17,9 @@ const Nav = (props: INavProps) => {
         <div className={props.location.pathname === '/' || props.location.pathname === '/home' ? 'none' : ''}>
             <div className={`nav${menuOpen ? '' : ' nav--hidden'}`}>
                 <div className='nav-link-wrapper'>
-                    <NavLink to='/Portfolio' className='nav-link'><hr className='nav-link--strike'/>PORTOFOLIO</NavLink>
-                    <NavLink to='/About' className='nav-link'><hr className='nav-link--strike'/>ABOUT</NavLink>
-                    <NavLink to='/Blog' className='nav-link'><hr className='nav-link--strike'/>BLOG</NavLink>
+                    <div onClick={() => {}} className='nav-link'><hr className='nav-link--strike'/>PORTOFOLIO</div>
+                    <div onClick={() => {}} className='nav-link'><hr className='nav-link--strike'/>ABOUT</div>
+                    <div onClick={() => {}} className='nav-link'><hr className='nav-link--strike'/>BLOG</div>
                 </div>
 
                 <div className='icon-wrapper'>

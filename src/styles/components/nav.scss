@@ -2,8 +2,10 @@
     display: flex;
     justify-content: space-between; 
     padding: 0 40px;
+    opacity: 1;
     height: 75px;
     width: 100%;
+    animation: fade 3s ease 0s none normal;
 }
 
 .header-logo {
@@ -25,8 +27,8 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: $lightGrey;
     opacity: 1;
     visibility: visible;
@@ -36,6 +38,7 @@
         position: relative;
         @include nav-link();
         text-decoration: none;
+        cursor: pointer;
 
         &-wrapper {
             display: flex;
@@ -122,5 +125,15 @@
                 transition: width 1s ease;
             }
         }
+    }
+  }
+
+  @keyframes fade {
+    from {
+        opacity: 0;
+    }
+  
+    to {
+        opacity: 1;
     }
   }

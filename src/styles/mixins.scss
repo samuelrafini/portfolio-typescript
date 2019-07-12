@@ -22,3 +22,26 @@
     letter-spacing: 0.93px;
     color: $medGrey;
 }
+
+@mixin Title-xl {
+    font-family: Taviraj;
+    font-size: 100px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: justify;
+    color: $off-white;
+}
+
+@mixin Title {
+    font-family: Taviraj;
+    font-size: 28px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $darkGrey;
+  }
