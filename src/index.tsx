@@ -5,10 +5,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from "react-router-dom";
 
+import {PortfolioProvider} from './PortfolioContext'
+
 
 ReactDOM.render(
     <BrowserRouter>
-        <App />
+        <PortfolioProvider>
+            <App />
+        </PortfolioProvider>
     </BrowserRouter>, 
     document.getElementById('root'));
 

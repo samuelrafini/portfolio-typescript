@@ -1,4 +1,6 @@
 .header {
+    z-index: 2;
+    position: absolute;
     display: flex;
     justify-content: space-between; 
     padding: 0 40px;
@@ -12,16 +14,19 @@
     margin-top: auto;
     @include headerLogo();
     text-decoration: none;
+    &--hidden {
+        visibility: hidden;
+    }
 }
 
 .header-menu {
-    z-index: 1;
-    margin-bottom: 16px;
+    margin-bottom: 13px;
     margin-top: auto;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .nav {
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +37,7 @@
     background-color: $lightGrey;
     opacity: 1;
     visibility: visible;
-    transition: visibility 0.5s, opacity 0.5s ease-in-out;
+    transition: visibility 1s, opacity 1s ease-in-out;
 
     &-link {
         position: relative;
@@ -71,7 +76,7 @@
     &--hidden {
         visibility: hidden;
         opacity: 0;
-        transition: visibility 0.5s, opacity 0.5s;
+        transition: visibility 1s, opacity 1s;
     }
 }
 

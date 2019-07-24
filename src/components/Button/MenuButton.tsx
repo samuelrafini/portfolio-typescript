@@ -17,7 +17,6 @@ useEffect(() => {
   props.isActive(menuActive);
 });
 
-console.log('outside handles', menuActive);
   return (
       <div className={`menu${' ' + props.className}`} onClick={() => handleClick()}>
         <div className={`menu-top${menuActive ? ' menu-top--turn': ''}`}/>
